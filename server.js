@@ -27,6 +27,7 @@ var Character = require('./models/character');
 var app = express();
 
 
+//mongoose.connect(config.database, { useMongoClient: true })
 mongoose.connect(config.database);
 mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB. Did you forget to run `mongod`?');
